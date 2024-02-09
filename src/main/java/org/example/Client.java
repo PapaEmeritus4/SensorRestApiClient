@@ -9,10 +9,16 @@ import org.springframework.web.client.RestTemplate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) {
-        String sensorName = "Sensor1";
+        runClient();
+    }
+
+    private static void runClient() {
+        Scanner scanner = new Scanner(System.in);
+        String sensorName = scanner.nextLine();
 
         registerSensor(sensorName);
 
